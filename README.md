@@ -12,82 +12,41 @@ This project reads from a TSV (tab-separated values) file of Italian verbs and q
 - Ruby installed (comes pre-installed on most Macs and many Linux distributions)
 
 ---
-
 ## 🚀 Getting Started
 
 ### 1. Open Your Terminal
 
-- On **Mac**, open **Terminal** (find it via Spotlight: press `⌘ + Space`, then type “Terminal” and hit Enter).
-- On **Linux**, open your **Terminal** from the Applications menu or using `Ctrl + Alt + T`.
+- On **Mac**, open **Terminal** using Spotlight:  
+  Press `⌘ + Space`, type `Terminal`, and press **Enter`.
+- On **Linux**, open your Terminal from the Applications menu or press `Ctrl + Alt + T`.
 
 ---
 
-### 2. Clone the Project
+### 2. Download the Project
 
-In the terminal, paste this line and press **Enter**:
+In your terminal, run this command to download the code:
 
 ```bash
 git clone https://github.com/srfenton/coniugazione.git
+```
 
-3. Go Into the Folder
+---
 
+### 3. Move Into the Project Folder
+
+Still in the terminal, run:
+
+```bash
 cd coniugazione
+```
 
-4. Run the Program
+---
 
+### 4. Start the Quiz
+
+To launch the program, enter:
+
+```bash
 ruby coniugazione.rb
+```
 
-🎮 How to Play
-
-    You'll be shown a verb in English, a subject (like "you"), and a tense (like "imperfetto").
-
-    Type the correct Italian conjugation and press Enter.
-
-    If you're right, it says “correct”.
-
-    If you're wrong, it shows the correct answer.
-
-    Press q at any time to quit.
-
-📄 Example Question
-
-1. to eat  
-subject: we  
-tense: presente
-
-You would type:
-
-mangiamo
-
-And hit Enter.
-🗂 What's in the Repo
-
-    coniugazione.rb – the main Ruby script that runs the quiz
-
-    data.tsv – list of verbs and their conjugations
-
-    .gitignore – standard Git ignore rules
-
-    README.md – this file!
-
-🧠 Tips
-
-    All answers must be in Italian, with no capital letters.
-
-    Spelling counts!
-
-    Practice makes perfect – run it as many times as you like.
-
-💬 Need Help?
-
-If you're not sure whether Ruby is installed, type this in your terminal:
-
-ruby -v
-
-You should see something like:
-
-ruby 3.0.2p107 (2021-07-07 revision 0db68f0233)
-
-If not, you can install Ruby via rbenv or your system’s package manager (like brew install ruby on Mac).
-
-Happy learning! 🇮🇹✨
