@@ -29,8 +29,6 @@ File.open(file_path, 'r') do |file|
       'they' => {}
     }
 
-#    i_verbi[traduzione][subject][:infinitivo] = infinitivo
-#    i_verbi[traduzione][subject][:traduzione] = traduzione
     i_verbi[traduzione][subject][:presente] = presente
     i_verbi[traduzione][subject][:passato_prossimo] = passato_prossimo
     i_verbi[traduzione][subject][:imperfetto] = imperfetto
@@ -50,11 +48,10 @@ class Question
  def initialize(i_verbi, seen)     
 
   @i_verbi = i_verbi.dup  # save as instance variable, use dup to avoid modifying outer hash
-  seen.each { |x| @i_verbi.delete(x) }
   
   @answer = i_verbi.keys.sample
-   @subject = i_verbi[@answer].keys.sample
-   @tense = i_verbi[@answer][@subject].keys.sample 
+  @subject = i_verbi[@answer].keys.sample
+  @tense = i_verbi[@answer][@subject].keys.sample 
 
  end
 
@@ -92,7 +89,7 @@ while i < i_verbi.size
   submitted = nil
 
   while submitted.nil?
-    submitted = $stdin.gets.chomp
+    submitted = $stdin.gets.chomp.strip
     break if submitted.downcase == 'q'  # Check for quit command
   end 
   
@@ -105,7 +102,7 @@ end
   puts "score: #{score} / #{i+1}"
   puts "\n"
 
-  sleep(2)
+  sleep(1.25)
   system("clear")
   i += 1 
 end
