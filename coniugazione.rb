@@ -102,7 +102,11 @@ end
   puts "score: #{score} / #{i+1}"
   puts "\n"
 
-  sleep(1.25)
+  continue = nil
+  while continue.nil?
+    puts 'Press enter to continue'
+    continue = $stdin.gets.chomp.strip
+  end
   system("clear")
   i += 1 
 end
